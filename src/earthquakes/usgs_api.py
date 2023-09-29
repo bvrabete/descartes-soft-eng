@@ -86,7 +86,7 @@ def build_api_url(
         Use the input parameters for the 3 above
         - eventtype: earthquake
         - minsig ? TODO: is this useful
-        - reviewstatus ? Same as above
+        - reviewstatus ? BV: I think it should be reviewstatus=reviewed
         - limit: limit the request: Integer [1,20000].
     NOTE: Query method Parameters should be submitted as key=value pairs using the HTTP GET method
     and may not be specified more than once; if a parameter is submitted multiple times the result is undefined.
@@ -127,7 +127,8 @@ def build_api_url(
         "longitude": str(longitude),
         "maxradiuskm": str(radius),
         "minmagnitude": str(min_magnitude),
-        "eventtype": "earthquake",
+        # "eventtype": "earthquake",
+        # "reviewstatus": "reviewed",
     }
 
     url_params = urlencode(params)
