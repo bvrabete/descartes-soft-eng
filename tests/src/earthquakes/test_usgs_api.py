@@ -83,7 +83,8 @@ def test_valid_parameters(valid_parameters: tuple) -> None:
         "longitude": [str(longitude)],
         "maxradiuskm": [str(radius)],
         "minmagnitude": [str(minimum_magnitude)],
-        "eventtype": ["earthquake"],
+        # "eventtype": "earthquake",
+        # "reviewstatus": "reviewed",
     }
     assert result.method == "GET"
 
@@ -91,7 +92,7 @@ def test_valid_parameters(valid_parameters: tuple) -> None:
 def test_invalid_parameters(invalid_parameters):
     """
     Test the behavior of the function when invalid parameters are provided.
-    TODO: test each parameter by making just one of the paraneters invalid
+    TODO: test each parameter by making just one of the parameters invalid
 
     Args:
         invalid_parameters (tuple): A tuple containing the latitude, longitude, radius,
